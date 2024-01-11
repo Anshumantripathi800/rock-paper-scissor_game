@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>rock paper scissor  game</h1>
+    <button onclick="
+    printComputerChoice();
+   let  resultMsg;
+    if(computerchoice===  'Rock'){
+        resultMsg =  'it is a tie';
+    }
+    else if (computerchoice===  'Paper'){
+    resultMsg =  'computer has won';
+}
+    else if (computerchoice===  'Scissor'){
+        resultMsg =  'You won'; 
+    }
+    alert(`You chosen Rock .Computer choice is ${computerchoice}.And ${resultMsg}` ) ">Rock</button>
+
+    <button onclick="
+    printComputerChoice();
+    if(computerchoice===  'Rock'){
+        resultMsg =  'You won';
+    }
+    else if (computerchoice===  'Paper'){
+    resultMsg =  'it is a tie';
+}
+    else if (computerchoice===  'Scissor'){
+        resultMsg =  'computer has won'; 
+    }
+    alert(`You chosen Paper .Computer choice is ${computerchoice}.And ${resultMsg}` )
+    ">Paper</button>
+
+    <button onclick="
+    printComputerChoice();
+    if(computerchoice===  'Paper'){
+        resultMsg =  'You won';
+    }
+    else if (computerchoice===  'Rock'){
+    resultMsg =  'Computer has won';
+}
+    else if (computerchoice===  'Scissor'){
+        resultMsg =  'it is a tie'; 
+    }
+    alert(`You chosen Scissor . Computer choice is ${computerchoice}. And ${resultMsg}` )
+
+
+    ">Scissor</button>
+
+    <script>
+        let computerchoice ;
+        function printComputerChoice (){
+     let randomnumber = Math.random()*3;
+    if(randomnumber > 0 && randomnumber <1){
+        computerchoice =  'Rock';
+    }
+    else if( randomnumber > 1 && randomnumber <2){
+        computerchoice =  'Paper';
+    }
+    else{
+        computerchoice =  'Scissor';
+    }
+
+        }
+     
+
+    </script>
+
+</body>
+</html>
