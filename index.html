@@ -13,41 +13,51 @@
    let  resultMsg;
     if(computerchoice===  'Rock'){
         resultMsg =  'it is a tie';
+        score.tie++;
     }
     else if (computerchoice===  'Paper'){
     resultMsg =  'computer has won';
+    score.lost++;
 }
     else if (computerchoice===  'Scissor'){
         resultMsg =  'You won'; 
+        score.won++;
     }
-    alert(`You chosen Rock .Computer choice is ${computerchoice}.And ${resultMsg}` ) ">Rock</button>
+    alert(`You chosen Rock .Computer choice is ${computerchoice}.And ${resultMsg} Won ${score.won}, lost ${score.lost} ,tied ${score.tie}` ) ">Rock</button>
 
     <button onclick="
     printComputerChoice();
     if(computerchoice===  'Rock'){
         resultMsg =  'You won';
+        score.won++;
     }
     else if (computerchoice===  'Paper'){
     resultMsg =  'it is a tie';
+    score.tie++;
 }
     else if (computerchoice===  'Scissor'){
         resultMsg =  'computer has won'; 
+        score.lost++;
     }
-    alert(`You chosen Paper .Computer choice is ${computerchoice}.And ${resultMsg}` )
+    alert(`You chosen Paper .Computer choice is ${computerchoice}.And ${resultMsg} Won ${score.won}, lost ${score.lost} ,tied ${score.tie}` )
     ">Paper</button>
 
     <button onclick="
     printComputerChoice();
     if(computerchoice===  'Paper'){
         resultMsg =  'You won';
+        score.won++;
     }
     else if (computerchoice===  'Rock'){
     resultMsg =  'Computer has won';
+    score.lost++;
 }
     else if (computerchoice===  'Scissor'){
         resultMsg =  'it is a tie'; 
+        score.tie++;
     }
-    alert(`You chosen Scissor . Computer choice is ${computerchoice}. And ${resultMsg}` )
+    alert(`You chosen Scissor . Computer choice is ${computerchoice}. And ${resultMsg}
+    Won ${score.won}, lost ${score.lost} ,tied ${score.tie}` )
 
 
     ">Scissor</button>
@@ -66,6 +76,11 @@
         computerchoice =  'Scissor';
     }
 
+        }
+        let score = {
+            won : 0, 
+            lost: 0,
+            tie: 0,
         }
      
 
